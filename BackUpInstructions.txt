@@ -1,0 +1,12 @@
+Seems like Visual Studio handles directories in some bullshity unholy way, just dragging and dropping files doesn't work.
+Thank you Microsoft, you made me spend 1:30 hours of my life raging like a monkey at a desk trying to figure out what the fuck is up with my project.
+I will never forgive you.
+
+1) Rename the current work folder to the backup name
+2) Create new project in Visual Studio in the same directory, give it the name of the working directory
+3) In the new project, remove the project under the solution
+4) Copy the project relevant files (defined classes, the .csproj, MainPage.xaml, MainPage.xaml.cs, and assets folder) into the newly created project
+5) Add the project to the solution by right clicking the solution, adding an existing project, and selecting the .csproj file in the same directory
+6) Wonder why the fuck is moving to a different directory is retardedly stupid
+7) ???
+8) No profit. Only pain.

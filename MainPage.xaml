@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="GameProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="850" Width="800">
+
+	<Grid>
+		<Canvas Name ="GameCanvas" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="800" Height="800" Background="Black"/>
+		<Canvas/>
+		<CommandBar Name="CommandBarUI">
+			<CommandBar.Content>
+				<TextBlock Name="Title" Text="Make enemies touch each other!" Margin="25,13,0,0"/>
+			</CommandBar.Content>
+			<AppBarButton Name ="MuteButton" Icon="Mute" Label="Mute" Click="MuteButton_Click"/>
+			<AppBarButton Name ="LoadButton" Icon="Upload" Label="Load" Click="LoadButton_Click"/>
+			<AppBarButton Name ="SaveButton" Icon="Save" Label="Save" Click="SaveButton_Click"/>
+			<AppBarButton Name ="RestartButton" Icon="Refresh" Label="Restart (R)" Click="RestartButton_click"/>
+			<AppBarButton Name ="PauseButton" Icon="Pause" Label="Pause (P)" Click="PauseButton_click"/>
+			<AppBarButton Name ="CancelButton" Icon="Cancel" Label="Exit (Esc)" Click="CloseButton_click"/>
+		</CommandBar>
+		<TextBlock Name ="OverlayText" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Text="" FontSize="100" Foreground="White" Opacity="0.5" Margin="0,-100,0,0"/>
+		<TextBlock Name ="OverlaySubtext" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center" Text="" FontSize="50" Foreground="White" Opacity="0.5" Margin="0,425,0,0"/>
+		<TextBlock Name ="LevelDisplay" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" TextAlignment="Left" Text="" FontSize="25" Foreground="White" Opacity="0.5" Margin="10,50,0,0"/>
+		<MediaElement Name ="MusicPlayer" HorizontalAlignment="Left" Height="0" Margin="0,-50,0,0" VerticalAlignment="Top" Width="0" MediaEnded="MediaEnded"/>
+	</Grid>
+</Page>
